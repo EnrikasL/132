@@ -1,0 +1,97 @@
+<html>
+	<meta charset="UTF-8">
+	<head>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="web.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/de993afe86.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+        <div class="top-tabs">
+            <h1 class="weapon-shop-title">Ginklų Parduotuvė</h1>
+            <i id="money" class="fas fa-wallet"> <h1 class="money-text">€50000</h1></i>
+            <i id="bank" class="fas fa-credit-card"> <h1 class="bank-text">€50000</h1></i>
+        </div>
+        <div class="weapon-tabs">
+            <ul class="weapons">
+                <li id="weapon" class="tablinks"><h1 class="li-text">Pistoletai</h1></li>
+                <li id="weapon" class="tablinks"><h1 class="li-text">Šaltieji</h1></li>
+                <li id="weapon" class="tablinks"><h1 class="li-text">Kulkos</h1></li>
+                <li id="weapon" class="tablinks"><h1 class="li-text">Įvairūs</h1></li>
+            </ul>
+            <button class="weapon-exit"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div class="weapon-toggled">
+            <ul class="weapons-toggle">
+                <li id="weaponf" class="tablinks active"><img class="weapon-img" src="img/glock-17.png"><h1 class="li-title">Glock 17</h1><h2 class="li-label">Pistoletas</h2><h3 class="li-price">€10000</h3><i id="bullet-icon" class="fas fa-bullseye"><h4 class="li-bullet"> 9 mm</h4></i><i id="weight-icon" class="fas fa-weight-hanging"><h4 class="li-weight">12kg</h4></i></li>
+                <li id="weaponf" class="tablinks"><img class="weapon-img" src="img/glock-17.png"><h1 class="li-title">Glock 17</h1><h2 class="li-label">Pistoletas</h2><h3 class="li-price">€10000</h3><i id="bullet-icon" class="fas fa-bullseye"><h4 class="li-bullet"> 9 mm</h4></i><i id="weight-icon" class="fas fa-weight-hanging"><h4 class="li-weight">12kg</h4></i></li>
+                <li id="weaponf" class="tablinks"><img class="weapon-img" src="img/revolver.png"><h1 class="li-title">Revolver</h1><h2 class="li-label">Revolveris</h2><h3 class="li-price">€25000</h3><i id="bullet-icon" class="fas fa-bullseye"><h4 class="li-bullet"> 12 mm</h4></i><i id="weight-icon" class="fas fa-weight-hanging"><h4 class="li-weight">12kg</h4></i></li>
+                <li id="weaponf" class="tablinks"><img class="weapon-img" src="img/glock-17.png"><h1 class="li-title">Glock 17</h1><h2 class="li-label">Pistoletas</h2><h3 class="li-price">€10000</h3><i id="bullet-icon" class="fas fa-bullseye"><h4 class="li-bullet"> 9 mm</h4></i><i id="weight-icon" class="fas fa-weight-hanging"><h4 class="li-weight">12kg</h4></i></li>
+                <li id="weaponf" class="tablinks"><img class="weapon-img" src="img/glock-17.png"><h1 class="li-title">Glock 17</h1><h2 class="li-label">Pistoletas</h2><h3 class="li-price">€10000</h3><i id="bullet-icon" class="fas fa-bullseye"><h4 class="li-bullet"> 9 mm</h4></i><i id="weight-icon" class="fas fa-weight-hanging"><h4 class="li-weight">12kg</h4></i></li>
+            </ul>
+        </div>
+
+        <div class="weapon-selected">
+            <h1 class="weapon-titles">Revolver</h1>
+            <div class="basket">
+                <button class="weapon-basket"><i id="weapon-basket-icon" class="fas fa-shopping-bag"></i></button>
+                <h1 class="weapon-basket-count">2 Daiktai</h1>
+                <h2 class="weapon-basket-total_sum"></h2>
+            </div>
+            <div class="count">
+                <button class="weapon-count-minus"><i class="fas fa-minus"></i></button>
+                <input type='number' class="weapon-count" name='quantity' value='1' readonly/>
+                <button class="weapon-count-add"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="weapon-stats">
+                <h1 class="weapon-rate-fire">Išovimo greitis
+                    <h2 class="weapon-rate-fire_val">40</h2>
+                    <progress class="progresss" id="rate-fire" value="40" max="100"></progress>
+                </h1>
+                <h1 class="weapon-accuracy">Taiklumas
+                    <h2 class="weapon-accuracy_val">53</h2>
+                    <progress class="progresss" id="accuracy" value="53" max="100"></progress>
+                </h1>
+                <h1 class="weapon-damage">Žala
+                    <h2 class="weapon-damage_val">63</h2>
+                    <progress class="progresss" id="damage" value="63" max="100"></progress>
+                </h1>
+            </div>
+            <button class="weapon-add-basket">Įdėti į krepšelį</button>
+
+            <div class="weapon-buying" style="display: none;">
+                <h1 class="weapon-buying-text">Pirkimas</h1>
+                <h2 class="weapon-buying-type">Atsiskaitymo tipas:</h2>
+                <select name="weapon-buying-type-input" id="weapon-buying-type-input">
+                    <option value="hand-money">Grynaisiais pinigais</option>
+                    <option value="bank-money">Banko Kortele</option>
+                </select>
+
+                <button class="weapon-buy-confirm">Pirkti</button>
+                <button class="weapon-buy-cancel">Atšaukti</button>
+            </div>
+
+            <div class="weapon-basket-toggled" style="display: none;">
+                <h1 style="display: none;" class="basket-title">Krepšelis</h1>
+                <div class="basket-tabs" style="display: none;">
+                    <h3 class="basket-weapon-tab">Ginklas</h3>
+                    <h4 class="basket-remove-tab">Išimti</h4>
+                    <h5 class="basket-count-tab">Kiekis</h5>
+                    <h6 class="basket-price-tab">Kaina / vnt</h6>
+                </div>
+                <h2 class="weapon-total-sum"></h2>
+                <button class="weapon-buy">Pirkti</button>
+                <button class="weapon-basket-exit"><i class="fas fa-angle-left"></i>Išeiti</button>
+
+                <div class="weapon-basket-list"></div>
+                <h8 style="display: none;" class="weapon-basket-empty">Atsiprašome</h8>
+                <h7 style="display: none;" class="weapon-basket-empty2">Tavo krepšelis yra tuščias</h7>
+            </div>
+            
+        </div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="web.js" type="text/javascript"></script>
+	</body>
+</html>

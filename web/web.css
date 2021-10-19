@@ -1,0 +1,724 @@
+body {
+    background-color: rgba(0, 0, 0, 0.514);
+    user-select: none;
+    font-family: 'Montserrat', sans-serif !important;
+    overflow: hidden;
+}
+
+.weapon-shop-title {
+    position: relative;
+    top: 1.5rem;
+    left: 2rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.top-tabs {
+    position: absolute;
+    top: 0rem;
+    width: 112rem;
+    height: 5rem;
+}
+
+.top-tabs, i {
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+}
+
+#money {
+    top: 2rem;
+    right: 10rem;
+    font-weight: bold;
+}
+
+#bank {
+    top: 2rem;
+    right: 0rem; 
+    font-weight: bold;
+}
+
+.weapon-tabs {
+    position: relative;
+    top: 5rem;
+    left: 2rem;
+    border-top: 2px solid rgb(83, 83, 83);
+    border-bottom: 2px solid rgb(83, 83, 83);
+    width: 113.5rem;
+    height: 3.5rem;
+}
+
+.weapon-tabs ul {
+    list-style-type: none;
+}
+
+.weapons li {
+    position: relative;
+    left: 25rem;
+    float: left;
+    margin-left: 1rem;
+    top: 0.5rem;
+    width: 13rem;
+    height: 2.3rem;
+    background-color: rgba(36, 36, 36, 0.63);
+    text-align: center;
+    color: white;
+}
+
+.weapons li:hover {
+    background-color: rgb(48, 48, 48);
+}
+
+.weapons li.active {
+    background-color: rgb(48, 48, 48);
+}
+
+.li-text {
+    position: relative;
+    top: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.weapon-exit {
+    position: relative;
+    display: flex;
+    left: 50rem;
+    top: -0.5rem;
+    width: 3rem;
+    height: 2.3rem;
+    background-color: rgba(36, 36, 36, 0.63);
+    justify-content: center;
+    outline: none;
+    border: none;
+    border-radius: 10rem;
+}
+
+.weapon-exit:hover {
+    background-color: rgb(48, 48, 48);
+}
+
+.weapon-exit i {
+    position: relative;
+    top: 0.4rem;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.weapon-toggled {
+    position: relative;
+    top: 6rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 30rem;
+    height: 46rem;
+    display: block;
+}
+
+.weapon-toggled ul {
+    list-style-type: none;
+}
+
+.weapons-toggle li {
+    position: relative;
+    left: 0rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    width: 25rem;
+    height: 11rem;
+    background-color: rgba(36, 36, 36, 0.63);
+    border-left: 2px solid #cea100;
+    text-align: center;
+    color: white;
+}
+
+.weapons-toggle li:hover {
+    background-color: #cea100;
+}
+
+.weapons-toggle li.active {
+    background-color: #cea100;
+}
+
+.li-title {
+    position: relative;
+    top: 0.8rem;
+    left: -9rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.li-price {
+    position: relative;
+    top: -2.5em;
+    left: 9rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.li-label {
+    position: relative;
+    top: 7rem;
+    left: -9rem;
+    font-size: 1rem;
+}
+
+#bullet-icon {
+    position: relative;
+    top: 3.7rem;
+    left: 4rem;
+    font-size: 1rem;
+}
+
+.li-bullet {
+    position: relative;
+    top: -1rem;
+    left: 2.5rem;
+    font-size: 1rem;
+}
+
+#weight-icon {
+    position: relative;
+    top: 3.7rem;
+    left: 7rem;
+    font-size: 1rem;
+}
+
+.li-weight {
+    position: relative;
+    top: -1rem;
+    left: 2rem;
+    font-size: 1rem;
+}
+
+.weapon-img {
+    position: absolute;
+    width: 11rem;
+    top: 2rem;
+    left: 8rem;
+}
+
+::-webkit-scrollbar {
+    width: 0.3rem;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(36, 36, 36, 0.63); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(95, 94, 94);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.weapon-selected {
+    position: absolute;
+    top: 9.5rem;
+    left: 31rem;
+    height: 46rem;
+    width:84.6rem;
+}
+
+.weapon-basket {
+    position: relative;
+    top: 1rem;
+    left: 79rem;
+    height: 4rem;
+    width: 3rem;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 10rem;
+}
+
+#weapon-basket-icon {
+    position: relative;
+    font-size: 2rem;
+    color: black;
+    text-shadow: 0 0 10px black;
+}
+
+.weapon-basket-count {
+    position: relative;
+    top: -2.5rem;
+    left: 73rem;
+    font-size: 1rem;
+    color: white;
+}
+
+.weapon-basket-total_sum {
+    position: relative;
+    top: -2.5rem;
+    left: 73rem;
+    font-size: 1rem;
+    color: white;
+}
+
+.weapon-stats {
+    position: relative;
+    top: 24.4rem;
+    width: 20rem;
+    height: 12em;
+    background-color: rgba(36, 36, 36, 0.63);
+    border-left: 2px solid #cea100;
+}
+
+.weapon-rate-fire {
+    position: relative;
+    top: 0.5rem;
+    left: 1rem;
+    color: white;
+    font-size: 1rem;
+}
+
+#rate-fire {
+    position: relative;
+    top: -1rem;
+    left: 1rem;
+}
+
+.weapon-rate-fire_val {
+    position: relative;
+    top: -1rem;
+    left: 17rem;
+    color: white;
+    font-size: 1rem; 
+}
+
+.weapon-accuracy {
+    position: relative;
+    top: 0.5rem;
+    left: 1rem;
+    color: white;
+    font-size: 1rem;
+}
+
+#accuracy {
+    position: relative;
+    top: -1rem;
+    left: 1rem;
+}
+
+.weapon-accuracy_val {
+    position: relative;
+    top: -1rem;
+    left: 17rem;
+    color: white;
+    font-size: 1rem; 
+}
+
+.weapon-damage {
+    position: relative;
+    top: 0.5rem;
+    left: 1rem;
+    color: white;
+    font-size: 1rem;
+}
+
+#damage {
+    position: relative;
+    top: -1rem;
+    left: 1rem;
+}
+
+.weapon-damage_val {
+    position: relative;
+    top: -1rem;
+    left: 17rem;
+    color: white;
+    font-size: 1rem; 
+}
+
+.weapon-add-basket {
+    position: relative;
+    top: 21.4rem;
+    left: 70rem;
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #ffc806;
+    border-radius: 10rem;
+    font-weight: bold;
+}
+
+.weapon-title {
+    position: absolute;
+    top: 0.3rem;
+    left: 3rem;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.weapon-add-basket:hover {
+    background-color: #facc25;
+}
+
+progress::-webkit-progress-value {
+    background: #ffc806;
+}
+
+progress {
+    background-color: transparent !important;
+    height: 8px;
+}
+
+progress::-webkit-progress-bar {
+    background: rgba(0, 0, 0, 0.5);
+    width: 180%;
+}
+
+.weapon-basket-toggled {
+    position: relative;
+    top: -22rem;
+    left: 35rem;
+    background: white;
+    width: 48rem;
+    height: 28rem;
+}
+
+.basket-title {
+    position: relative;
+    top: 1rem;
+    left: 1rem;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.weapon-basket-list {
+    position: relative;
+    top: -3.5rem;
+    height: 15rem;
+    overflow-y: scroll;
+}
+
+.weapon_list {
+    position: relative;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 46rem;
+    height: 2.2rem;
+    margin-top: 0.2rem;
+    margin-left: 2%;
+    justify-content: center;
+    color: white;
+
+}
+
+.circle {
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+    width: 1rem;
+    height: 1rem;
+    background-color: #ffc806;
+    border-radius: 1rem;
+}
+
+.weapon-titles {
+    position: relative;
+    top: 0.3rem;
+    left: 0rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.weapon-count {
+    position: absolute;
+    top: 43rem;
+    font-size: 1rem;
+    left: 55rem;
+    border: none !important;
+    outline: none !important;
+    background-color: #ffc806;
+    width: 10rem;
+    height: 3rem;
+    color: white;
+    text-align: center;
+    border-radius: 10rem;
+    font-weight: bold;
+    z-index: -1;
+}
+
+.weapon-count2 {
+    position: absolute;
+    background-color: rgba(56, 56, 56, 0.63);
+    left: 19rem;
+    top: 0.1rem;
+    width: 2.5rem;
+    height: 1.8rem;
+    border: none;
+    outline: none;
+    display: flex;
+    text-align: center;
+    border-radius: 10rem;
+    color: white;
+}
+
+.weapon-count-add {
+    position: absolute;
+    border: none !important;
+    outline: none !important;
+    background-color: #ffc806;
+    width: 3.2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    top: 43.5rem;
+    left: 61.2rem;
+    border-radius: 10rem;
+}
+
+.weapon-count-add:hover {
+    background-color: #e0b105;
+}
+
+.weapon-count-minus:hover {
+    background-color: #e0b105;
+}
+
+.weapon-count-minus {
+    position: absolute;
+    border: none !important;
+    outline: none !important;
+    background-color: #ffc806;
+    width: 3.2rem;
+    height: 2rem;
+    text-align: center;
+    top: 43.5rem;
+    left: 55.5rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 10rem;
+}
+
+.weapon-count-add i {
+    position: relative;
+    top: 0.5rem;
+    color: white;
+}
+
+.weapon-count-minus i {
+    position: relative;
+    top: 0.5rem;
+    color: white;
+}
+
+.weapon-price {
+    position: absolute;
+    left: 30rem;
+    top: 0.5rem;
+    width: 4rem;
+    height: 1.8rem;
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+}
+
+.weapon-remove {
+    position: absolute;
+    background-color: rgba(56, 56, 56, 0.63);
+    left: 43.5rem;
+    top: 0.1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 10rem;
+}
+
+.weapon-remove:hover {
+    background-color: rgb(48, 48, 48);
+}
+
+.weapon-remove i {
+    position: relative;
+    top: 0.4rem;
+}
+
+.weapon-buy {
+    position: absolute;
+    top: 24rem;
+    left: 35rem;
+    width: 10rem;
+    height: 2.2rem;
+    outline: none;
+    background-color: rgb(56, 177, 56);
+    border:none;
+    color: white;
+}
+
+.weapon-buy:hover {
+    background-color: rgb(70, 187, 70);
+}
+
+.weapon-basket-exit {
+    position: absolute;
+    top: 24rem;
+    left: 3rem;
+    width: 10rem;
+    height: 2.2rem;
+    outline: none;
+    background-color: rgb(87, 87, 87);
+    border:none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.weapon-basket-exit:hover {
+    background-color: rgb(105, 105, 105);
+}
+
+.weapon-basket-exit i {
+    position: relative;
+    top: 0.2rem;
+    left: -2rem;
+    font-size: 1.5rem;
+}
+
+.weapon-total-sum {
+    position: absolute;
+    left: 35rem;
+    top: 22rem;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.weapon-buying {
+    position: relative;
+    top: -20rem;
+    left: 26rem;
+    width: 30rem;
+    height: 30rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px black;
+}
+
+.weapon-buying-text {
+    position: relative;
+    top: 1rem;
+    left: 9rem;
+    color: gray;
+    font-size: 2.5rem;
+}
+
+.weapon-buying-type {
+    position: relative;
+    top: 10rem;
+    left: 2rem;
+    color: gray;
+    font-size: 1.5rem;
+}
+
+#weapon-buying-type-input {
+    position: relative;
+    top: 7.5rem;
+    left: 17rem;
+    border: 1px solid #ffc806;
+    height: 2rem;
+    outline: none;
+}
+
+.weapon-buy-confirm {
+    position: relative;
+    top: 20.5rem;
+    left: 6rem;
+    width: 10rem;
+    height: 2.2rem;
+    outline: none;
+    background-color: rgb(56, 177, 56);
+    border:none;
+    color: white;
+}
+
+.weapon-buy-confirm:hover {
+    background-color: rgb(70, 187, 70);
+}
+
+.weapon-buy-cancel {
+    position: relative;
+    top: 18.3rem;
+    left: 2rem;
+    width: 10rem;
+    height: 2.2rem;
+    outline: none;
+    background-color: rgb(87, 87, 87);
+    border:none;
+    color: white;
+}
+
+.weapon-buy-cancel:hover {
+    background-color: rgb(105, 105, 105);
+}
+
+.money-text {
+    position: relative;
+    top: -1rem;
+    left: 1.3rem;
+    font-size: 1rem;
+}
+
+.bank-text {
+    position: relative;
+    top: -1rem;
+    left: 1.3rem;
+    font-size: 1rem;
+}
+
+.basket-weapon-tab {
+    position: relative;
+    top: 1rem;
+    left: 3rem;
+    font-size: 1rem;
+}
+
+.basket-count-tab {
+    position: relative;
+    top: -2.4rem;
+    left: 19.7rem;
+    font-size: 1rem;
+}
+
+.basket-remove-tab {
+    position: relative;
+    font-size: 1rem;
+    top: -0.6rem;
+    left: 44rem;
+}
+
+.basket-price-tab {
+    position: relative;
+    font-size: 1rem;
+    top: -4rem;
+    left: 31.2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.weapon-basket-empty {
+    position: absolute;
+    top: 5rem;
+    left: 16rem;
+    font-size: 2rem;
+    color: rgb(245, 75, 75);
+}
+
+.weapon-basket-empty2 {
+    position: absolute;
+    top: 8rem;
+    left: 10rem;
+    font-size: 2rem;
+}
